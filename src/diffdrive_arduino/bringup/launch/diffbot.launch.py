@@ -28,7 +28,7 @@ def generate_launch_description():
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
             PathJoinSubstitution(
-                [FindPackageShare("diffdrive_arduino"), "urdf", "robot_real.urdf.xacro"]
+                [FindPackageShare("diffdrive_arduino"), "urdf", "robot2.urdf.xacro"]
             ),
         ]
     )
@@ -38,7 +38,7 @@ def generate_launch_description():
         [
             FindPackageShare("diffdrive_arduino"),
             "config",
-            "my_controllers1.yaml",
+            "my_controllers.yaml",
         ]
     )
     rviz_config_file = PathJoinSubstitution(
@@ -100,7 +100,7 @@ def generate_launch_description():
         control_node,
         robot_state_pub_node,
         joint_state_broadcaster_spawner,
-        delay_rviz_after_joint_state_broadcaster_spawner,
+        #delay_rviz_after_joint_state_broadcaster_spawner,
         delay_robot_controller_spawner_after_joint_state_broadcaster_spawner,
     ]
 

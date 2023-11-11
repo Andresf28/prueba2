@@ -11,6 +11,10 @@
   <!-- Import diffbot ros2_control description -->
   <xacro:include filename="$(find diffdrive_arduino)/ros2_control/diffbot.ros2_control.xacro" />
 
+  <xacro:include filename="inertial_macros.xacro"/>
+
+  <xacro:include filename="lidar2.xacro" />
+
   <xacro:diffbot prefix="$(arg prefix)" />
 
   <xacro:diffbot_ros2_control
